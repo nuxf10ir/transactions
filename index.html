@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор ответов для финансового директора</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div class="speech-gen">
+
+    <h2 class="speech-gen__header">
+        Воспользуйтесь способом N
+    </h2>
+
+    <div class="speech-gen__note">
+        Чтобы понять какие способы подойдут в вашей ситуации, ответьте на три вопроса
+    </div>
+
+    <form class="speech-gen__form" id="speech-gen__form">
+
+        <div class="speech-gen__row">
+
+            <p class="speech-gen__question">
+                <b>Вопрос 1</b>
+                <br />
+                Вам необходимо перечислить деньги:
+            </p>
+
+            <p class="speech-gen__answer">
+                <input class="speech-gen__radio"
+                       type="radio"
+                       name="answer1"
+                       id="speech-gen__answer1-1"
+                       data-answer="[true, true, true, true, true]" />
+                <label for="speech-gen__answer1-1" class="speech-gen__label">из материнской компании в дочернюю;</label>
+            </p>
+
+            <p class="speech-gen__answer">
+                <input class="speech-gen__radio"
+                       type="radio"
+                       name="answer1"
+                       id="speech-gen__answer1-2"
+                       data-answer="[false, true, false, true, true]" />
+                <label for="speech-gen__answer1-2" class="speech-gen__label">из дочерней компании в материнскую;</label>
+            </p>
+
+            <p class="speech-gen__answer">
+                <input class="speech-gen__radio"
+                       type="radio"
+                       name="answer1"
+                       id="speech-gen__answer1-3"
+                       data-answer="[false, true, false, true, true]" />
+                <label for="speech-gen__answer1-3" class="speech-gen__label">между дочерними компаниями.</label>
+            </p>
+        </div>
+
+        <div class="speech-gen__row">
+
+            <p class="speech-gen__question">
+                <b>Вопрос 2.</b>
+                <br/>
+                Деньги надо перевести:
+            </p>
+
+            <p class="speech-gen__answer">
+                <input class="speech-gen__radio"
+                       type="radio"
+                       name="answer2"
+                       id="speech-gen__answer2-1"
+                       data-answer="[true, true, true, true, true]" />
+                <label for="speech-gen__answer2-1" class="speech-gen__label">внутри страны;</label>
+            </p>
+
+            <p class="speech-gen__answer">
+                <input class="speech-gen__radio"
+                       type="radio"
+                       name="answer2"
+                       id="speech-gen__answer2-2"
+                       data-answer="[true, false, false, true, false]" />
+                <label for="speech-gen__answer2-2" class="speech-gen__label">из России в компанию, зарегистрированную за рубежом;</label>
+            </p>
+
+            <p class="speech-gen__answer">
+                <input class="speech-gen__radio"
+                       type="radio"
+                       name="answer2"
+                       id="speech-gen__answer2-3"
+                       data-answer="[true, true, true, true, true]" />
+                <label for="speech-gen__answer2-3" class="speech-gen__label">из компании, зарегистрированной за рубежом.</label>
+            </p>
+
+        </div>
+
+        <div class="speech-gen__row">
+
+            <p class="speech-gen__question">
+                <b>Вопрос 3.</b>
+                <br/>
+                Вам надо перечислить деньги:
+            </p>
+
+
+            <p class="speech-gen__answer">
+                <input class="speech-gen__radio"
+                       type="radio"
+                       name="answer3"
+                       id="speech-gen__answer3-1"
+                       data-answer="[true, true, true, true, true]" />
+                <label for="speech-gen__answer3-1" class="speech-gen__label">индивидуального предпринимателя в компанию на общей системе налогообложения;</label>
+            </p>
+
+            <p class="speech-gen__answer">
+                <input class="speech-gen__radio"
+                       type="radio"
+                       name="answer3"
+                       id="speech-gen__answer3-2"
+                       data-answer="[false, false, false, true, true]" />
+                <label for="speech-gen__answer3-2" class="speech-gen__label">из компании на общей системе налогообложения индивидуальному предпринимателю;</label>
+            </p>
+
+            <p class="speech-gen__answer">
+                <input class="speech-gen__radio"
+                       type="radio"
+                       name="answer3"
+                       id="speech-gen__answer3-3"
+                       data-answer="[true, true, true, true, true]" />
+                <label for="speech-gen__answer3-3" class="speech-gen__label">между компаниями на общей системе налогообложения.</label>
+            </p>
+
+        </div>
+
+        <div class="speech-gen__row speech-gen__result">
+
+            <p class="speech-gen__phrase">
+                Вам <span id="result-phrase" class="speech-gen__generated-phrase"></span>. Подробнее о них читайте ниже.
+            </p>
+
+        </div>
+
+
+    </form>
+
+
+</div>
+</body>
+</html>
