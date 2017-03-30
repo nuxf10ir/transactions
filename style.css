@@ -16,6 +16,7 @@
 
 .speech-gen {
     max-width: 750px;
+    font-family: "KafkaSerifText", "Times New Roman", Times, serif;
 }
 
 .speech-gen .speech-gen__header {
@@ -124,6 +125,10 @@
 .speech-gen .speech-gen__result-note .variant {
     display: none;
     margin-bottom: 1em;
+}
+
+.speech-gen .speech-gen__result-note .variant a {
+    font-size: 14px;
 }
 
 .speech-gen .speech-gen__result-note .variant a:hover {
