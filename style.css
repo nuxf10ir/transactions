@@ -113,10 +113,6 @@
 .speech-gen  .speech-gen__result-note {
     font: normal 16px/22px "KafkaSerifText", "Times New Roman", Times, serif;
     display: block;
-    background: #f1a42e;
-    color: white;
-    padding: 0.5em 1em;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
     margin-top: 1em;
 }
 
@@ -130,8 +126,8 @@
     margin-bottom: 1em;
 }
 
-.speech-gen .speech-gen__result-note .variant a {
-    color: #ffffff;
+.speech-gen .speech-gen__result-note .variant a:hover {
+    color: #f1a42e;
 }
 
 .speech-gen .show-1 .speech-gen__result-note .vari-1,
