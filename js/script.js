@@ -4,7 +4,8 @@ $(document).ready(function () {
 
     var $form = $("#speech-gen__form"),
         $rows = $(".speech-gen__row", $form),
-        $resultTextNode = $("#result-phrase", $form),
+        $result = $(".speech-gen__result", $form),
+        $resultTitle = $("#result-phrase", $result),
         result = [true, true, true, true, true],
         resultLength = result.length,
         resultNumbers = [];
@@ -71,22 +72,24 @@ $(document).ready(function () {
         var last,
             hasVari = false,
             vari = {
-                true: "подойдут способы ",
-                false: "подойдет способ "
+                true: "подойдут варианты ",
+                false: "подойдет вариант "
             };
 
         resultNumbers = [];
 
         for (var i = 0; i < resultLength; i++) {
+            var num = i + 1;
             result[i] = result[i] && answer[i];
-            !!result[i] && resultNumbers.push(i + 1);
+            result[i] && resultNumbers.push(num);
+            $result.toggleClass("show-" + num, result[i]);
         }
 
-        last = resultNumbers.pop();
 
-        hasVari = !!resultNumbers.length;
 
-        $resultTextNode.text(vari[hasVari] + resultNumbers.join(", ") + (hasVari ? " и " : "") +  last);
+        hasVari = resultNumbers.length > 1;
+
+        $resultTitle.text(vari[hasVari]);
 
     }
 

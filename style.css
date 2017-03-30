@@ -55,22 +55,22 @@
 }
 
 .speech-gen .speech-gen__label {
-    padding: 5px 10px;
+    padding: 5px 10px 5px 30px;
     cursor: pointer;
-    max-width: 650px;
-    width: 100%;
-    display: inline-block;
+    width: 611px;
+    display: block;
+    position: relative;
 }
 
 
 .speech-gen .speech-gen__label:before {
     content: "";
-    display: inline-block;
+    display: block;
     width: 16px;
     height: 16px;
-    position: relative;
-    vertical-align: text-top;
-    margin: 0 10px 0 0;
+    position: absolute;
+    left: 5px;
+    top: 6px;
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMUlEQVQ4T2NkYGD4D8RkA0aqGfD/P2kOYWQE2c3AAHfBqAHAuBwNxOEQBuRmR4pzIwCWAjQBw+gPWAAAAABJRU5ErkJggg==") no-repeat;
 }
 
@@ -108,4 +108,36 @@
     border: 1px solid #f1a42e;
     text-decoration: none;
     color: #ffffff;
+}
+
+.speech-gen  .speech-gen__result-note {
+    font: normal 16px/22px "KafkaSerifText", "Times New Roman", Times, serif;
+    display: block;
+    background: #f1a42e;
+    color: white;
+    padding: 0.5em 1em;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    margin-top: 1em;
+}
+
+.speech-gen .speech-gen__result-note .note-title {
+    border-bottom: 1px solid #ffffff;
+    padding: 0 0 .5em 0;
+}
+
+.speech-gen .speech-gen__result-note .variant {
+    display: none;
+    margin-bottom: 1em;
+}
+
+.speech-gen .speech-gen__result-note .variant a {
+    color: #ffffff;
+}
+
+.speech-gen .show-1 .speech-gen__result-note .vari-1,
+.speech-gen .show-2 .speech-gen__result-note .vari-2,
+.speech-gen .show-3 .speech-gen__result-note .vari-3,
+.speech-gen .show-4 .speech-gen__result-note .vari-4,
+.speech-gen .show-5 .speech-gen__result-note .vari-5 {
+    display: block !important;
 }
